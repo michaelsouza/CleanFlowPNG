@@ -1,0 +1,29 @@
+# Compiler
+NVCC := nvcc
+
+# Compiler flags
+NVCC_FLAGS := -O3
+
+# Source file
+SRC := matrix_update_cuda.cu
+
+# Executable name
+EXEC := matrix_update_cuda
+
+# Default target
+all: $(EXEC)
+
+# Compile the CUDA source file into an executable
+$(EXEC): $(SRC)
+	$(NVCC) $(NVCC_FLAGS) $< -o $@
+
+# Run the executable
+run: $(EXEC)
+	./$(EXEC)
+
+# Clean up generated files
+clean:
+	rm -f $(EXEC)
+
+# Phony targets
+.PHONY: all run clean

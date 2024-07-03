@@ -2,17 +2,17 @@
 CXX = g++
 
 # Compiler flags
-# CXXFLAGS = -std=c++11 -Wall -Wextra -O2 -fopenmp # release
-CXXFLAGS = -std=c++11 -Wall -Wextra -g -O0 -fopenmp # debug
+CXXFLAGS = -std=c++11 -Wall -Wextra -O3 -fopenmp -flto # Focused on execution speed
+# CXXFLAGS = -std=c++11 -Wall -Wextra -g -O0 -fopenmp # debug
 
 # Linker flags for libpng and OpenMP
 LDFLAGS = -lpng -fopenmp
 
 # Name of the output executable
-TARGET = matrix_update
+TARGET = clean_image
 
 # Source files
-SOURCES = matrix_update.cpp
+SOURCES = clean_image.cpp
 
 # Object files
 OBJECTS = $(SOURCES:.cpp=.o)

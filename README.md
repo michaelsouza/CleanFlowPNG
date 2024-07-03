@@ -1,4 +1,4 @@
-# PixBalance
+# CleanFlowPNG
 - Requirements:
   - libpng
   - libpng++
